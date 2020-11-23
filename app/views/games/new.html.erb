@@ -1,0 +1,12 @@
+
+
+<div class="container d-flex flex-column justify-content-center align-items-center vw-100 vh-100">
+    <h2>New game</h2>
+  <div class="card shadow-sm px-3 py-3">
+    <div class='d-flex'>
+      <% @letters.each do |letter| %>
+        <div class='bg-dark rounded text-white w-100 h-100 px-2 mx-2'> <%=letter%> </div>
+      <% end %>
+    </div>
+  </div>
+</div>
