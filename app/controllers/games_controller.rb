@@ -1,5 +1,4 @@
 class GamesController < ApplicationController
-
   def new
     @letters = ('a'..'z').to_a.sample(10)
   end
@@ -10,15 +9,16 @@ class GamesController < ApplicationController
     given_letters = params['letters'].split
 
     user_letters.each do |letter|
-      binding.pry
+      # binding.pry
       if given_letters.include?(letter)
         given_letters.delete(letter)
       else
-        puts "fail, no such letter in given"
-        return false
+        # puts "fail, no such letter in given"
+        @result = false
+        return
       end
     end
-    puts "success!!"
-    return true
+    # puts "success!!"
+    @result = true
   end
 end
